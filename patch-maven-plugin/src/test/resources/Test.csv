@@ -1,0 +1,4 @@
+1234,be.mercator.atlas.cleva.batchs,0.15.28,be.mercator.atlas.cleva.batch.args,ArgsBatchDocumentOutbound.class
+1234,be.mercator.atlas.cleva.dao,0.15.28,be.mercator.atlas.cleva.dao.impl,ATLAS_DAO_PremiumUtilImpl.class
+1235,be.mercator.atlas.cleva.dao,0.15.28,be.mercator.atlas.cleva.dao.impl,ATLAS_DAO_F_GARANTIE_DYNImpl.class
+1236,be.mercator.atlas.cleva.batchs,0.15.28,be.mercator.atlas.cleva.batch.impl,BatchDateSchedulerImpl.class

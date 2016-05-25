@@ -40,6 +40,9 @@ public class CsvRecord implements Serializable {
 	 *            the id to set
 	 */
 	public void setId(String id, CsvColumnIndex zero) {
+		if(id == null || id == ""){
+			throw new IllegalArgumentException("The value of ID field must not be empty.");
+		}
 		if (zero != null && zero == CsvColumnIndex.ZERO) {
 			this.id = id;
 		}
@@ -57,6 +60,9 @@ public class CsvRecord implements Serializable {
 	 *            the artifactId to set
 	 */
 	public void setArtifactId(String artifactId, CsvColumnIndex one) {
+		if(artifactId == null || artifactId == ""){
+			throw new IllegalArgumentException("The artifact field must not be empty.");
+		}
 		if (one != null && one == CsvColumnIndex.ONE) {
 			this.artifactId = artifactId;
 		}
@@ -91,6 +97,9 @@ public class CsvRecord implements Serializable {
 	 *            the classPackage to set
 	 */
 	public void setClassPackage(String classPackage, CsvColumnIndex three) {
+		if(classPackage == null || classPackage == ""){
+			throw new IllegalArgumentException("The classPackage must not be empty.");
+		}
 		if (three != null && three == CsvColumnIndex.THREE) {
 			this.classPackage = classPackage;
 		}
@@ -108,6 +117,9 @@ public class CsvRecord implements Serializable {
 	 *            the className to set
 	 */
 	public void setClassName(String className, CsvColumnIndex four) {
+		if(className == null || className == ""){
+			throw new IllegalArgumentException("The className field must not be empty.");
+		}
 		if (four != null && four == CsvColumnIndex.FOUR) {
 			this.className = className;
 		}
