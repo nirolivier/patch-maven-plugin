@@ -48,7 +48,7 @@ public class PatchCreateMojo extends AbstractPatchMojo {
 			CsvRecord csvRecord = createCsvRecord(items);
 			String outPutDir = getProject().getBuild().getOutputDirectory();
 			String classPackagePath = ClassUtils.convertToPath(csvRecord.getClassPackage());
-			outPutDir += FileSeparator.SLASH + classPackagePath;
+			outPutDir += File.separator + classPackagePath;
 
 			// cat the patch dir pattern
 			StringBuilder patchDirNamePattern = new StringBuilder();
@@ -56,7 +56,6 @@ public class PatchCreateMojo extends AbstractPatchMojo {
 				for (String pattern : getOutPutPatch().getPatterns()) {
 					patchDirNamePattern.append(pattern).append(FileSeparator.HYPHEN);
 				}
-
 			}
 			patchDirNamePattern.append(csvRecord.getId()).append(FileSeparator.HYPHEN)
 					.append(getProject().getVersion());
@@ -65,8 +64,8 @@ public class PatchCreateMojo extends AbstractPatchMojo {
 			List<File> classes = FileUtil.findLike(new File(outPutDir), csvRecord.getClassName());
 			for (File clazz : classes) {
 				StringBuilder outPutPatchDirTemp = new StringBuilder(getOutPutPatch().getOutPutPatchDir());
-				outPutPatchDirTemp.append(FileSeparator.SLASH).append(patchDirNamePattern.toString())
-						.append(FileSeparator.SLASH).append(getProject().getArtifactId()).append(FileSeparator.SLASH)
+				outPutPatchDirTemp.append(File.separator).append(patchDirNamePattern.toString())
+						.append(File.separator).append(getProject().getArtifactId()).append(File.separator)
 						.append(classPackagePath);
 				try {
 					FileUtils.copyFileToDirectory(clazz, new File(outPutPatchDirTemp.toString()));
