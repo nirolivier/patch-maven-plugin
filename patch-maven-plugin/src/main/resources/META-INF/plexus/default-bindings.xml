@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component-set>
+	<components>
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>pom</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>jar</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>ejb</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>maven-plugin</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>war</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>ear</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+
+		<component>
+			<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+			<role-hint>rar</role-hint>
+			<implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+			</implementation>
+			<configuration>
+				<lifecycles>
+					<lifecycle>
+						<id>patch</id>
+
+						<phases>
+							<patch-compile>
+								org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+							</patch-compile>
+							<patch-create>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:create
+							</patch-create>
+							<patch-package>
+								com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:package
+							</patch-package>
+						</phases>
+
+					</lifecycle>
+				</lifecycles>
+			</configuration>
+		</component>
+
+		<component>
+			<role>org.apache.maven.lifecycle.Lifecycle</role>
+			<implementation>org.apache.maven.lifecycle.Lifecycle</implementation>
+			<role-hint>patch</role-hint>
+			<configuration>
+				<id>patch</id>
+
+				<phases>					
+					<phase>patch-compile</phase>
+					<phase>patch-create</phase>
+					<phase>patch-package</phase>
+				</phases>
+
+			</configuration>
+		</component>
+		<component>
+			<role>org.apache.maven.lifecycle.Lifecycle</role>
+			<implementation>org.apache.maven.lifecycle.Lifecycle</implementation>
+			<role-hint>patch-clean</role-hint>
+			<configuration>
+				<id>patch-clean</id>
+
+				<phases>
+					<phase>patch-pre-clean</phase>
+					<phase>patch-clean</phase>
+					<phase>patch-post-clean</phase>
+				</phases>
+				<default-phases>
+					<patch-clean>
+						com.zeus:patch-maven-plugin:0.0.1-SNAPSHOT:clean
+					</patch-clean>
+				</default-phases>
+
+			</configuration>
+		</component>
+	</components>
+</component-set>
